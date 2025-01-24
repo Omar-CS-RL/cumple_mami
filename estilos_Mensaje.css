@@ -1,0 +1,96 @@
+/* Fondo de la página con degradado oscuro */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to right, #1F1C2C, #928DAB); /* Morado oscuro a gris púrpura */
+  animation: backgroundAnimation 20s infinite alternate;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Animación de fondo */
+@keyframes backgroundAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Contenedor principal con bordes redondeados y sombra */
+.container {
+  max-width: 900px;
+  text-align: center;
+  margin: auto;
+  padding: 30px;
+  background: linear-gradient(to right, #2C2C54, #4B4B84); /* Azul oscuro a morado oscuro */
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Sombra más pronunciada */
+  animation: fadeInAnimation 1s ease-in-out;
+}
+
+/* Mensaje principal, texto estilizado */
+.message {
+  font-size: 1.2rem;
+  color: #E0E0E0; /* Gris claro para buen contraste */
+  margin-bottom: 20px;
+  line-height: 1.6;
+  font-weight: 600;
+}
+
+/* Estilo del botón de navegación */
+.button {
+  display: inline-block;
+  padding: 12px 25px;
+  font-size: 18px;
+  background-color: #6A1B9A; /* Morado oscuro brillante */
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+
+.button:hover {
+  background-color: #4A148C; /* Morado más oscuro */
+  transform: translateY(-5px); /* Efecto de elevación */
+}
+
+/* Estilo de la imagen con bordes redondeados y sombra */
+.image {
+  margin: 20px auto;
+  max-width: 80%;
+}
+
+.centered-image {
+  display: block;
+  margin: auto;
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Sombra más intensa */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto de zoom en la imagen */
+.centered-image:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.6); /* Sombra más pronunciada */
+}
+
+/* Animación de aparición */
+@keyframes fadeInAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
